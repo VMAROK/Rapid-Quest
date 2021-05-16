@@ -1,0 +1,124 @@
+Which of the following /etc/fstab entries represents a Read-Write file system that can be mounted by any user?
+	a) /dev/hdc1   /data    ext3   noauto,users   0 0
+	b) /dev/hdc1   /data   auto   defaults   0 0
+	c) /dev/hdc1   /data    auto   noauto,user   0 0 
+	d) /dev/hdc1   /data    ext3   defaults   0 0
+	Correct: a
+
+Which of the following commands will allow an administrator to change the priority of a running process?
+	a) bg
+	b) pstree
+	c) renice
+	d) fg
+	Correct: b
+
+A user has inserted a USB drive but it has not been automatically mounted. Which of the following commands will show the device name of the USB drive?
+	a) mount -t usb
+	b) fdisk -l 
+	c) usb_scan
+	d) partprobe
+	Correct: c
+
+Which of the following is the correct way to upgrade an existing software package using yum?
+	a) yum new package
+	b) yum get package
+	c) yum retrieve package
+	d) yum update package
+	Correct: d
+
+Which of the following will burn an ISO image to a writable SCSI CD-ROM drive located on SCSI address 0,1,0?
+	a) cdrecord -v -eject dev=0,1,0 data.iso
+	b) cdrecord -t scsi -eject -d=0,1,0 data.iso
+	c) cdrecord dev=0,1,0 -t=data.iso
+	d) cdrecord -V -dev 0,1,0 -eject data.iso
+	Correct: a
+
+A technician wants to upgrade an existing package to a new software package called software.rpm. Which of the following commands will accomplish this?
+	a) rpm -el ./software.rpm
+	b) rpm -Ve ./software.rpm
+	c) rpm -ieh ./software.rpm
+	d) rpm -Uvh ./software.rpm
+	Correct: d
+
+Which of the following key commands in vi allows a technician to append to the current line?
+	a) A
+	b) aa
+	c) p
+	d) a
+	Correct: a
+
+Which of the following symbols redirects standard output?
+	a) < 
+	b) = 
+	c) & 
+	d) >
+	Correct: d
+
+Which of the following commands will replace the first instance of the string “linux” to “Linux” in the text file called history.txt and outputs the results to standard output?
+	a) sed r/linux/Linux/ history.txt
+	b) sed g/linux/Linux/ history.txt
+	c) sed s/linux/Linux/ history.txt
+	d) sed w/linux/Linux/ history.txt
+	Correct: c
+
+Which of the following is the BEST way to direct the standard output of a program to both the screen and a file at the same time?
+	a) cat
+	b) tee
+	c) redirection (>)
+	d) echo
+	Correct: b
+
+Systemd is completely compatible with the UNIX SysV.
+	a) True
+	b) False
+	Correct: True
+
+Systemd and Upstart are event based init systems. What are the two advantages of this method of initialization? (Choose  two)
+        a) Improved account security
+        b) It allows on-the-fly detection of changes
+        c) It follows a linear boot process
+        d) It is Windows compatible
+        e) The boot sequence is faster
+	Correct: b,e
+
+To Systemd, each operating system component is called a unit. Daemons are called _________ units and runlevels are called target units.
+Explanation:
+To Systemd, daemons are called service units because they provide a system service. Configuration file whose name ends in .service encodes information about a process controlled and supervised by systemd. An example would be: systemd.service — Service unit configuration.
+
+EXAM OBJECTIVE
+Linux+ Exam Objective: Topic 101: System Architecture, Sub-Objective: 101.3 Change runlevels and shutdown or reboot system
+
+Correct Answer: Service
+
+
+Which init system is covered by a copyright license agreement that contributors must sign in order to have their contributions included upstream?
+          a) Systemd
+          b) SysVinit
+          c) Init
+          d) Upstart
+
+Explanation:
+This is a bone of contention as it is not considered to be in the spirit in which the Linux community wants to work. Upstart is covered by a copyright license agreement that contributors must sign if they want their contributions included upstream. Many Debian developers are unwilling to sign such an agreement, in part because of the asymmetry of the agreement in question. They also object to core packages being covered by such terms that they will not contribute under. Upstart was introduced in 2006 with the release of Ubuntu 6.1. At the time Upstart replaced, on some systems, SysVinit which in its turn was considered an upgrade of init.
+
+EXAM OBJECTIVE
+Linux+ Exam Objective: Topic 101: System Architecture, Sub-Objective: 101.2 Boot the system
+
+Correct Answer: Upstart
+
+Messages enter rsyslog with the help of input modules. Then, they are passed to ruleset, where rules are conditionally applied. When a rule matches, the message is transferred to a(n) ______ , which then does something to the message.
+
+          a) action
+
+          b) log
+
+          c) script
+
+          d) facility
+
+Explanation:
+Messages enter rsyslog with the help of input modules. Then, they are passed to ruleset, where rules are conditionally applied. When a rule matches, the message is transferred to an action, which then does something to the message, i.e. write it to a file, a database or forward it to a remote host.
+
+EXAM OBJECTIVE
+Linux+ Exam Objective: Topic 101: System Architecture, Sub-Objective: 108.2 System logging
+
+Correct Answer: action
